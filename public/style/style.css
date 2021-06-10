@@ -1,0 +1,482 @@
+html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+}
+body { 
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Helvetic;
+    background: var(--background);
+    background-size: 5px 5px, 100% 100%;
+}
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.logo {
+    width: 100%;
+    height: 50px;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    width: 100%;
+    height: 50px;
+}
+#content_game {
+    width: 100%;
+    height: 80%;
+    margin-top: 2.5%;
+    display: flex;
+    justify-content: space-around;
+}
+#main_screen {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#game_board {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--light-font);
+    background: var(--game-board);
+    font-size: 36px;
+}
+.welcome_message {
+    text-align: center;
+    font-size: 40px;
+}
+#play_button {
+    margin-top: 2.5%;
+    padding: 0 35px;
+    font-size: 24px;
+}
+#refresh_button {
+    display: none;
+    margin-top: 2.5%;
+    padding: 0 28px;
+    font-size: 24px;
+}
+#ranking_button {
+    background: var(--ranking-background);
+    width: 100px;
+    height: 35px;
+    position: fixed;
+    top: 50%;
+    right: -35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+#ranking_screen {
+    width: 30%;
+    height: 85.5%;
+    opacity: 0;
+    display: none;
+    background: var(--ranking-background);
+}
+.ranking_table {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--light-font);
+    font-family: Helvetic;
+}
+.ranking_table thead {   
+    width: 100%;
+    height: 10%;
+    background: var(--light-font);
+    color: var(--dark-font);
+}
+.ranking_table thead tr {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.ranking_table thead tr th {font-weight: unset;}
+
+#ranking_tbody {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    color: var(--selector);
+}
+#ranking_tbody tr {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    background: #d6d6d6;
+    border-top: 1px solid var(--selector);
+}
+
+#ranking_tbody tr:last-child {border-bottom: unset;}
+
+#ranking_tbody td {
+    display: flex;
+    justify-content: center;
+}
+#ranking_tbody td:nth-child(1) {
+    justify-content: unset;
+    padding-left: 10px;
+}
+
+.ranking_table th:nth-child(odd),
+.ranking_table td:nth-child(odd) {width: 40%;}
+
+.ranking_table th:nth-child(even),
+.ranking_table td:nth-child(even) {width: 20%;}
+
+#ranking_tbody tr:nth-child(1) {background: var(--rankin-one);}
+#ranking_tbody tr:nth-child(2) {background: var(--rankin-two);}
+#ranking_tbody tr:nth-child(3) {background: var(--rankin-three);}
+#ranking_tbody tr:nth-child(4) {background: var(--rankin-four);}
+
+.hundredth_sec {
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+}
+.config_content {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    opacity: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: 350ms;
+}
+#config_step1 {
+    width: 60%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 5px;
+}
+#config_step1_title {
+    width: 100%;
+    height: 5%;
+    font-size: 28px;
+    display: block;
+    margin: 30px 0 10px 0;
+    text-align: center;
+}
+.config_step1_nick {
+    height: 20%;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.config_step1_nick p {margin: 0 0 10px 0;}
+
+.steps {
+    font-size: 36px;
+    color: var(--selector);
+}
+#config_step1_nick_input {
+    width: 80%;
+    height: 40px;
+    background: #ebebe6;
+    font-size: 24px;
+    color: var(--light-font);
+    border: 1px dotted var(--border);
+    border-radius: unset;
+    text-align: center;
+}
+.config_step1_keys {
+    width: 90%;
+    height: 55%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+}
+
+.config_step1_keys p {margin: 0;}
+
+.setting_keys_content {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+.setting_keys_text {
+    width: 32.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+.setting_keys_text span {
+    width: 100%;
+    height: 50%;
+    padding: 10px 0;
+    display: flex;
+}
+.set_k_l span {
+    justify-content: flex-end;
+    text-align: right;
+}
+.set_k_l_t {
+    align-items: flex-start;
+}
+.set_k_l_b {
+    align-items: flex-end;
+}
+svg#setting_keys {
+    width: 35%;
+    height: 100%;
+}
+.set_k_r span {
+    justify-content: flex-start;
+    text-align: left;
+}
+.set_k_r_t {
+    align-items: flex-start;
+}
+.set_k_r_b {
+    align-items: flex-end;
+}
+.daltonic_option {
+    width: 100%;
+    height: 5%;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+.daltonic_check {
+    all: unset;
+    border: 1px solid var(--selector);
+    border-radius: 4px;
+    background: #fff;
+    min-width: 15px;
+    min-height: 15px;
+    margin-right: 5px;
+}
+.daltonic_check:checked {
+    background: var(--selector);
+    box-shadow: 0px 0px 0px 3px #fff inset;
+}
+.daltonic_label {color: var(--light-font);}
+
+.config_step1_keys svg {height: 70%;}
+
+.config_steps_buttons {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.config_steps_buttons button {
+    padding: 0 35px;
+    font-size: 24px;
+}
+
+.config_button_left {margin-left: 40px;}
+.config_button_right {margin-right: 40px;}
+
+#config_step2 {
+    width: 60%;
+    height: 90%;
+    display: none;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--background);
+    border-radius: 5px;
+}
+.paragraph_choose_layout {
+    width: 100%;
+    height: 10%;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    font-size: 24px;
+}
+.simon_models {
+    width: 70%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.simon_models div {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-between;
+    align-items: center;
+}
+
+.simon_models div img {width: 80%;}
+
+.simon_models div label {
+    height: 10%;
+    font-size: 16px;
+}
+.simon_models div input {
+    all: unset;
+    display: block;
+    height: 5%;
+    margin: 0;
+    min-width: 15px;
+    min-height: 15px;
+    border: 1px solid var(--selector);
+    background: #fff;
+}
+.simon_models div input:checked {
+    background: var(--selector);
+    box-shadow: 0px 0px 0px 3px #fff inset;
+}
+
+#simon_model_default_input {border-radius: 10px;}
+#simon_model_square_input {border-radius: 4px;}
+
+.skill_option {
+    width: 100%;
+    height: 20%;
+    margin: 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    text-align: center;
+}
+
+#skill_level_range {width: 30%;}
+
+#choosed_skill_level {
+    height: 45%;
+    font-size: 18px;
+    color: var(--selector);
+}
+#game_board_play {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.match_elements {
+    width: 20%;
+    height: 100%;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+}
+.match_data_text {
+    width: 100%;
+    background: var(--selector);
+    color: var(--dark-font);
+    font-size: 24px;
+}
+.match_data span {
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--selector);
+    font: Helvetic;
+    font-size: 24px;
+}
+#current_step_output,
+#total_time_output {
+    color: var(--selector);
+}
+#total_time_output {
+    font-size: 18px;
+}
+.match_buttons {
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+.match_buttons svg {
+    width: 100%;
+    height: 100%;
+}
+.match_elements_center {
+    width: 60%;
+    height: 100%;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.simon_board_content {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.simon_board {    
+    width: 100%;
+    height: 100%;
+}
+#start_text {
+    pointer-events: unset;
+}
+.finish_game_message {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.button_start_square {
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.button_start_square svg {
+    height: 95% ;
+}
+.finish_game_text {
+    color: var(--selector);
+    font-size: 34px;
+}

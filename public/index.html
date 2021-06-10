@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <title>Genius Game</title>
+
+    <link rel="shortcut icon" href="images/favicon-192x192.png" />
+    <link rel="stylesheet" href="style/set-style.css" type="text/css" />
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <link rel="stylesheet" href="style/range-style.css" type="text/css" />
+    <link rel="stylesheet" href="style/responsive.css" type="text/css" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Web Site for Genius Game by ls -la group" />
+    <meta name="keywords" content="genius, simon, game" />
+    <meta name="author" content="ls -la group" />
+
+    <meta property="og:title" content="Genius Game" />
+    <meta property="og:type" content="games" />
+    <meta property="og:description" content="Web Site for Genius Game by ls -la group" />
+    <meta property="og:url" content="http://equipe02.alphaedtech.org.br/" />
+    <meta property="og:image" content="http://equipe02.alphaedtech.org.br/images/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Genius Game" />
+    <meta name="twitter:description" content="Web Site for Genius Game by ls -la group" />
+
+  </head>
+
+  <body id="body">
+    <div id="content">
+      <div class="logo">
+        <img src="images/genius-logo.svg" alt="Logo" />
+      </div>
+      <div id="content_game">
+        <div id="main_screen">
+          <div id="game_board"></div>
+          <button
+          id="play_button"
+          class="main_button"
+          onclick="playGameConfigStep1()"
+        >
+          Play!
+        </button>
+          <button
+            id="refresh_button"
+            class="main_button"
+            onclick="window.location.reload()"
+          >
+            Home
+          </button>
+        </div>
+        <div id="ranking_screen" class="ranking_screen_hide">
+          <table
+            id="ranking_table"
+            class="ranking_table"
+            border="1"
+            cellspacing="0"
+            rules="none"
+          >
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Score</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody id="ranking_tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <span id="ranking_button" onclick="showRanking()">Ranking</span>
+    </div>
+
+    <div class="config_content" id="config_content">
+      <div class="config_step1" id="config_step1">
+        <p id="config_step1_title">Please answer some questions before</p>
+        <div class="config_step1_nick">
+          <p><span class="steps">1.</span> What’s your Nickname?</p>
+          <input
+            id="config_step1_nick_input"
+            type="text"
+            maxlength="14"
+            placeholder="Insert a Nick"
+          />
+        </div>
+
+        <div class="config_step1_keys" id="config_step1_keys">
+          <p>
+            <span class="steps">2.</span> Which key of your keyboard do you want
+            to use?
+          </p>
+          <div class="setting_keys_content">
+            <div class="setting_keys_text set_k_l">
+              <span
+                id="set_top_left"
+                class="green_text input_key_text set_k_l_t"
+              ></span>
+              <span
+                id="set_bottom_left"
+                class="yellow_text input_key_text set_k_l_b"
+              ></span>
+            </div>
+            <svg
+              id="setting_keys"
+              width="251"
+              height="251"
+              viewBox="0 0 251 251"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="bg_Input_key_top_left"
+                d="M0.236856 106.949C-0.633627 112.768 2.53396 114.708 4.22657 114.95H56.7747C59.2438 114.95 59.835 112.895 60.2524 111.444L60.2639 111.404C72.5494 68.7238 111.223 59.6727 113.037 59.6727C114.85 58.9454 114.85 57.2483 114.85 56.036V5.12265C113.69 1.04958 109.773 0.516199 107.959 0.758643C34.5484 11.2323 4.22657 73.492 0.236856 106.949Z"
+                fill="#4AAB99"
+                stroke="var(--border)"
+                stroke-width="2"
+              />
+              <path
+                id="bg_Input_key_top_right"
+                d="M144.13 0.858402C138.327 -0.0143995 136.393 3.16163 136.151 4.85874L136.151 57.5468C136.151 59.8545 138.364 60.6624 139.687 61.0452C182.255 73.3634 191.282 112.14 191.282 113.959C191.282 115.413 193.7 115.777 194.909 115.777L245.687 115.777C249.749 114.613 250.281 110.686 250.039 108.867C239.593 35.2613 177.499 4.85874 144.13 0.858402Z"
+                fill="#F53A59"
+                stroke="var(--border)"
+                stroke-width="2"
+              />
+              <path
+                id="bg_Input_key_bottom_right"
+                d="M249.94 144.408C250.81 138.589 247.643 136.65 245.95 136.407L193.402 136.407C191.108 136.407 190.35 138.436 189.913 139.953C177.627 182.634 139.333 191.685 137.14 191.685C135.326 192.23 135.326 194.109 135.326 195.321L135.326 246.235C136.487 250.308 140.404 250.841 142.218 250.599C215.628 240.125 245.95 177.865 249.94 144.408Z"
+                fill="#2F95B8"
+                stroke="var(--border)"
+                stroke-width="2"
+              />
+              <path
+                data-id="bottomRight"
+                onclick="setKey('bottomRight')"
+                id="setting_blue_key"
+                class="keys blue_key_style"
+                d="M248.879 148.532C250.683 141.184 249.158 140.236 248.324 140.236L195.194 140.236C193.069 140.236 192.366 142.129 191.961 143.546C180.578 183.377 143.762 192.984 141.554 194.044C139.874 194.552 140.044 196.785 140.044 196.785L139.502 248.262C139.668 249.962 140.224 250.237 141.788 250.237C144.606 250.235 148.741 249.062 148.741 249.062C216.039 236.732 243.766 179.602 248.879 148.532Z"
+                fill="white"
+                fill-opacity="0.15"
+              />
+              <path
+                data-id="topLeft"
+                onclick="setKey('topLeft')"
+                id="setting_green_key"
+                class="keys green_key_style"
+                d="M1.65768 102.353C-0.146828 109.701 1.37808 110.648 2.21265 110.648H55.3422C57.4672 110.648 58.1703 108.755 58.575 107.339C69.9581 67.5073 106.774 57.9009 108.982 56.8407C110.663 56.3322 110.493 54.0998 110.493 54.0998L111.035 2.62205C110.868 0.922956 110.312 0.647958 108.748 0.647949C105.93 0.649357 101.795 1.82295 101.795 1.82295C34.4972 14.1523 6.77012 71.2821 1.65768 102.353Z"
+                fill="white"
+                fill-opacity="0.15"
+              />
+              <path
+                data-id="topRight"
+                onclick="setKey('topRight')"
+                id="setting_red_key"
+                class="keys red_key_style"
+                d="M148.653 1.55568C141.325 -0.253633 140.38 1.27534 140.38 2.11213L140.38 55.3831C140.38 57.5138 142.268 58.2188 143.681 58.6246C183.406 70.0379 192.987 106.952 194.045 109.166C194.552 110.851 196.778 110.681 196.778 110.681L248.119 111.224C249.814 111.057 250.088 110.5 250.088 108.931C250.087 106.106 248.916 101.96 248.916 101.96C236.404 35.5732 179.642 6.68173 148.653 1.55568Z"
+                fill="white"
+                fill-opacity="0.15"
+              />
+              <path
+                id="bg_Input_key_bottom_left"
+                d="M106.046 250.499C111.849 251.372 113.784 248.196 114.026 246.499L114.026 193.811C113.49 191.32 111.66 190.651 110.489 190.312C67.922 177.994 58.895 139.217 58.895 137.399C58.0877 135.58 56.477 135.58 55.268 135.58L4.48977 135.58C0.427514 136.744 -0.104448 140.672 0.137353 142.49C10.5832 216.096 72.6776 246.499 106.046 250.499Z"
+                fill="#cea838"
+                stroke="var(--border)"
+                stroke-width="2"
+              />
+              <path
+                data-id="bottomLeft"
+                onclick="setKey('bottomLeft')"
+                id="setting_yellow_key"
+                class="keys yellow_key_style"
+                d="M101.874 249.613C109.202 251.422 110.147 249.893 110.147 249.056L110.147 195.785C110.147 193.655 108.259 192.95 106.847 192.544C67.1206 181.13 57.5397 144.216 56.4823 142.002C55.9752 140.318 53.7487 140.488 53.7487 140.488L2.40764 139.944C0.713054 140.111 0.438786 140.669 0.438777 142.237C0.440181 145.063 1.61066 149.209 1.61066 149.209C13.9073 216.686 70.8854 244.487 101.874 249.613Z"
+                fill="white"
+                fill-opacity="0.15"
+              />
+            </svg>
+            <div class="setting_keys_text set_k_r">
+              <span
+                id="set_top_right"
+                class="red_text input_key_text set_k_r_t"
+              ></span>
+              <span
+                id="set_bottom_right"
+                class="blue_text input_key_text set_k_r_b"
+              ></span>
+            </div>
+          </div>
+          <p class="daltonic_option" id="daltonic_option">
+            <input
+              type="checkbox"
+              id="daltonic_check"
+              class="daltonic_check"
+              name="daltonic_check"
+              onclick="daltonicSettingStatus()"
+            />
+            <label class="daltonic_label">Daltonic?</label>
+          </p>
+        </div>
+        <div class="config_steps_buttons">
+          <button
+            id="config_button_back"
+            class="aux_button config_button_left"
+            onclick="backToHome()"
+          >
+            Back
+          </button>
+          <button
+            id="config_button_next"
+            class="main_button config_button_right"
+            onclick="validateNickname()"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <div class="config_next" id="config_step2">
+        <p class="paragraph_choose_layout">
+          <span class="steps">3.</span> Choose the layout
+        </p>
+        <div class="simon_models">
+          <div>
+            <img
+              id="simon_model_default_image"
+              src="images/simon-model-default.svg"
+              alt="Simon's standard model"
+            />
+            <label for="simon_model_default_input" class="font_responsive18"
+              >Default</label
+            >
+            <input
+              type="radio"
+              name="simon_model"
+              checked
+              value="default"
+              id="simon_model_default_input"
+            />
+          </div>
+          <div>
+            <img
+              id="simon_model_square_image"
+              src="images/simon-model-square.svg"
+              alt="Simon's square model"
+            />
+            <label for="simon_model_square_input" class="font_responsive18"
+              >Square</label
+            >
+            <input
+              type="radio"
+              name="simon_model"
+              value="square"
+              id="simon_model_square_input"
+            />
+          </div>
+        </div>
+        <p class="skill_option">
+          <label for="skill_level_range"
+            ><span class="steps">4.</span
+            ><span id="skill_text"> Choose your skill level</span></label
+          >
+          <input
+            type="range"
+            id="skill_level_range"
+            class="default_range"
+            name="skill_level_range"
+            min="0"
+            max="4"
+            step="1"
+            value="0"
+            onchange="setSkillLevel()"
+          />
+          <span id="choosed_skill_level">&nbsp</span>
+        </p>
+        <div class="config_steps_buttons">
+          <button
+            id="config_step2_button_back"
+            class="aux_button config_button_left"
+            onclick="returnToGameConfigStep1()"
+          >
+            Back
+          </button>
+          <button
+            id="config_step2_button_ready"
+            class="main_button config_button_right"
+            onclick="saveConfig()"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+  <script src="script/timer.js" type="text/javascript"></script>
+  <script src="script/simon.js" type="text/javascript"></script>
+  <script src="script/script.js" type="text/javascript"></script>
+  <script src="script/accessibility.js" type="text/javascript"></script>
+</html>

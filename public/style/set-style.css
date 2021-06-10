@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+
+@font-face {
+  font-family: Helvetic;
+  src: url("../fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: Helvetic-bold;
+  src: url("../fonts/Helvetica-Bold.ttf");
+}
+
+:root {
+  --button-top-left: #4aab99;
+  --button-bottom-left: #cea838;
+  --button-bottom-right: #2f95b8;
+  --button-top-right: #f53a59;
+  --rankin-one: #f7788d;
+  --rankin-two: #ecd282;
+  --rankin-three: #569fb8;
+  --rankin-four: #77b3a8;
+  --button-daltonic-top-left: #808080;
+  --button-daltonic-bottom-left: #cea838;
+  --button-daltonic-bottom-right: #73a4ff;
+  --button-daltonic-top-right: #9e61ff;
+  --background: #f0e9cf;
+  --black: #18110f;
+  --light-font: #565555;
+  --dark-font: #fffff6;
+  --inative-font: #8d8d8d;
+  --svg-stroke: #8d8d8d;
+  --inative-selector: #cacaca;
+  --selector: #352b24;
+  --ranking-background: #fefeec;
+  --light-screen: #ebebeb;
+  --dark-screen: #352b24;
+  --light-button: linear-gradient(
+    264.61deg,
+    rgba(222, 222, 222, 0.9) 4.47%,
+    #c0c0c0 99.15%
+  );
+  --dark-button: linear-gradient(
+    264.61deg,
+    rgba(32, 21, 15, 0.9) 4.47%,
+    #2c1f18 99.15%
+  );
+  --game-board: #ebebeb;
+  --border: #565555;
+  --main-button: url("../images/bg-main-button.svg") no-repeat;
+  --main-button-hover: url("../images/bg-main-button-hover.svg") no-repeat;
+  --aux-button: url("../images/bg-aux-button.svg") no-repeat;
+  --aux-button-hover: url("../images/bg-aux-button-hover.svg") no-repeat;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  color: var(--light-font);
+}
+
+.style_text {
+  font-size: 48px;
+}
+button {
+  width: 150px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: unset;
+  border-radius: 16px;
+  background-size: cover;
+  font-family: Helvetic-bold;
+  color: var(--dark-font);
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.5s;
+}
+button:hover {
+  transition: 0.5s;
+}
+.green_text {
+  color: var(--button-top-left);
+}
+.yellow_text {
+  color: var(--button-bottom-left);
+}
+.blue_text {
+  color: var(--button-bottom-right);
+}
+.red_text {
+  color: var(--button-top-right);
+}
+
+.main_button {
+  background: var(--main-button);
+}
+.main_button:hover {
+  background: var(--main-button-hover);
+}
+.aux_button {
+  background: var(--aux-button);
+  color: var(--light-font);
+}
+.aux_button:hover {
+  background: var(--aux-button-hover);
+}
+button:focus {
+  outline: unset;
+}
+
+.keys:hover {
+  fill-opacity: 0.8;
+}
+.keys:active {
+  fill-opacity: 0.1;
+}
+
+.keys {
+  cursor: pointer;
+  fill-opacity: 0.15;
+  transition: fill-opacity 0.3s ease;
+}
+
+.keys.highlight {
+  fill-opacity: 0.8;
+}
+
+input:focus {
+  outline: unset;
+}
+input:focus::placeholder {
+  color: #dad5d0;
+}
+
+input::placeholder {
+  color: var(--inative-font);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--inative-font);
+}
+*::-webkit-scrollbar-button {
+  height: 0;
+}
+*::-webkit-scrollbar-track {
+  margin-top: 0;
+  margin-bottom: 0;
+}

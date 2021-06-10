@@ -1,0 +1,129 @@
+@media(max-width: 1080px){
+
+    .logo {margin-top: 4%;}
+
+    #content_game {
+        margin-top: 0;
+        height: 85%;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main_screen {
+        width: 100%;
+        height: 60%;
+    }
+    #game_board {
+        width: 90%;
+        height: 90%;
+    }
+
+    .welcome_message {
+        padding: 0 5px; 
+        font-size: 30px;
+    }
+
+    #play_button {margin-top: 5%;}
+
+    #ranking_button {
+        top: 100%;
+        right: 50%;
+        margin-top: -35px;
+        margin-right: -50px;
+        transform: unset;
+        pointer-events: unset;
+    }
+    #ranking_screen {
+        width: 90%;
+        height: 40%;
+        margin: 5% 0 10px 0;
+    }
+
+    .ranking_table {box-sizing: content-box;}
+
+    #ranking_tbody {
+        font-size: 14px;
+        color: var(--selector);
+    }
+    #ranking_tbody tr {
+        height: auto;
+        border-right: 1px solid var(--selector);
+        border-bottom: 1px solid var(--selector);
+    }
+    
+
+    #config_step1 {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    #config_step1_title {
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    .config_step1_nick,
+    .config_step1_keys p,
+    .paragraph_choose_layout,
+    .font_responsive18,
+    #skill_text {
+        width: 90%;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .config_step1_keys { height: 50%;}
+
+    .setting_keys_text {font-size: 13px;}
+
+    .set_k_l span {
+        text-align: left;
+    }
+    
+    svg#setting_keys {width: 50%;}
+
+    .set_k_r span {
+        text-align: justify;
+    }
+
+    .steps {font-size: 24px;}
+
+    .config_button_left {margin-left: 10px;}
+
+    .config_button_right {margin-right: 10px;}
+
+    #config_step2 {width: 90%;}
+
+    .simon_models {
+        width: 95%;
+        height: 30%;
+    }
+    .simon_models div img {width: 100%;}
+
+    #skill_level_range {width: 50%;}
+    
+    .simon_board { width: 100%; height: 100%;}
+
+    .match_data {width: 90%;}
+
+    .match_data div {width: 60px;}
+
+    .match_data span {
+        font-size: 14px;
+        width: 100%;
+        height: 25px;
+    }
+    #current_step_output,
+    #total_time_output {
+        background: unset;
+        color: var(--selector);
+    }
+    #total_time_output {
+        font-size: 12px;
+    }
+    .match_buttons {
+        width: 40px;
+        height: 40px;
+    }
+    .finish_game_text {
+        font-size: 16px;
+    }
+}
