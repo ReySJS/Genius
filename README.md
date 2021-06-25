@@ -52,6 +52,6 @@ The game have the desktop and mobile versions.
 
 ## 🧑‍💻 Contributors
 
-[Juliana Burzlaff](https://github.com/JulianaBurzlaff)
-[Rey](https://github.com/ReySJS)                                                                                                                               
-[Angélica Gomes](https://github.com/ConnieMarble)                                                                                  
+- [Juliana Burzlaff](https://github.com/JulianaBurzlaff)
+- [Rey](https://github.com/ReySJS)                                                                                                                               
+- [Angélica Gomes](https://github.com/ConnieMarble)                                                                                  
