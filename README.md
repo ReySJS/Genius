@@ -23,7 +23,7 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
-Genius Game(Simon) was developed with three months of study. It includes some great features like the possibility to play with the keyboard, the daltonic mode and two differents shapes of board.
+Genius Game(Simon) was developed with three months of study. It includes some great features like the possibility to play with the keyboard, the daltonic mode and two differents shapes of board. [Click here to play!](https://genius-blond.vercel.app/)
 
 ## 🔖 Layout
 
